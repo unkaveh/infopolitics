@@ -1,0 +1,322 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Cardo:400,700|Pathway+Gothic+One');
+
+Body{
+    height:100%;
+    min-height:800px;
+}
+/*Font Area*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Pathway Gothic One', sans-serif;
+    color: #283744;
+}
+
+body,
+p,
+a,
+li{
+    font-family: 'Cardo', serif;
+}
+
+.nav-label{
+    font-size: 12px;
+}
+
+/*End Font Area*/
+
+/*Master Color Area*/
+
+/**Navbar Color**/
+.navbar-default {
+  background-color: #dab183;
+  border-color: #b48550;
+}
+.navbar-default .navbar-brand {
+  color: #ffefdd;
+    margin-left: 0px;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #ffe0be;
+}
+.navbar-default .navbar-text {
+  color: #ffefdd;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ffefdd;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ffe0be;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #dab183;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #ffefdd;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #ffe0be;
+  background-color: #b48550;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
+  background-color: #b48550;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #ffe0be;
+  background-color: #b48550;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #ffe0be;
+  background-color: #b48550;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #ffe0be;
+  background-color: #b48550;
+}
+.navbar-default .navbar-toggle {
+  border-color: #b48550;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #b48550;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffefdd;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ffefdd;
+}
+.navbar-default .navbar-link {
+  color: #ffefdd;
+}
+.navbar-default .navbar-link:hover {
+  color: #ffe0be;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffefdd;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffe0be;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffe0be;
+    background-color: #b48550;
+  }
+}
+
+#login-drop{
+    min-width:250px;
+    padding: 8px 8px 0;
+    overflow:hidden;
+}
+
+/**End NavBar Color**/
+
+body {
+
+    background-color: #EAE1C2;
+    height:100%;
+}
+
+a{
+    color:#BB1515;
+}
+#form1{
+    min-height:100%;
+}
+footer {
+    background-color:#283744;
+    color: #E0CDA7;
+    width:100%;
+    position: relative;
+    left:0;
+    bottom:0;
+}
+.footer{
+    bottom:0;
+    position:relative;
+}
+#footerStyle h4{
+    color:white;
+}
+
+#footerStyle a{
+    color:inherit;
+}
+
+#footerStyle a:hover{
+    color: #BB1515;
+    text-decoration:none;
+}
+
+.panel-primary{
+    background-color:#E0CDA7;
+    /**panel border on search pages*/
+    border-color: #BEA575;
+}
+
+.myPanel{
+    /***font color*/
+    /*color:;*/
+    /***color of the profile*/
+    background-color:#7B8784;
+    /**line onthe profile**/
+    border-color:#9E834D;
+}
+
+/*End Master Color Area*/
+
+/*Jumbotron*/
+#mainImage {
+    height: 350px;
+    background-image: url('../Images/jumbotron_bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.contactImage {
+    height: 350px;
+    background-image: url('../Images/contact_bg.jpg');
+
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#mainImage:not(h1):not(h4){
+    opacity: .8;
+    filter: alpha(opacity=80);
+}
+#mainImage h1, #contactImage h1{
+    font-weight:700;
+}
+
+#mainImage h4, #contactImage h4{
+    font-weight:700;
+}
+
+.first-words{
+    opacity: 0;
+}
+/*End Jumbotron*/
+/*Horitzonal Tags*/
+hr:before, hr:after { content: ''; }
+hr {
+  border: 0;
+  margin: 1.35em auto;
+  max-width: 100%;
+  background-position: 50%;
+  box-sizing: border-box;
+}
+
+.bookends {
+  position: relative;
+  border-width: 5px;
+  border-color: hsl(0, 0%, 50%) transparent;
+  height: 11px;
+  border-style: double;
+  width: 20%;
+}
+.bookends:before,
+.bookends:after {
+  position: absolute;
+  bottom: -3.536px;
+  width: 7.071px;
+  height: 7.071px;
+  display: block;
+  border-width: 0 7.071px 7.071px 0;
+  border-color: hsl(0, 0%, 50%);
+  border-style: double;
+  box-sizing: border-box;
+}
+.bookends:before {
+  transform: translateZ(0) rotate(-45deg);
+  left: -21px;
+}
+.bookends:after {
+  transform: translateZ(0) rotate(135deg);
+  right: -21px;
+}
+
+.slash-3 {
+  height: 10px;
+  background-image: linear-gradient(45deg,
+    hsla(0, 0%, 5%, 0),
+    hsla(0, 0%, 5%, 0) 33.33%,
+    hsla(0, 0%, 5%, 1) #283744,
+    hsla(0, 0%, 5%, 1) #283744,
+    hsla(0, 0%, 5%, 0) 66.67%,
+    hsla(0, 0%, 5%, 0) 100%);
+  background-size: 10px 100%;
+  width: 250px;
+  color: #283744;
+}
+
+hr.style17 {
+	border-top: 1px solid #8c8b8b;
+	text-align: center;
+}
+hr.style17:after {
+	content: '§';
+	display: inline-block;
+	position: relative;
+	top: -14px;
+	padding: 0 10px;
+	background: #EAE1C2;
+	color: #8c8b8b;
+	font-size: 18px;
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+	transform: rotate(60deg);
+}
+
+/*End Horizontal Tags*/
+
+/*Positioning*/
+html,
+body{
+    height:100%;
+}
+body{
+    padding-top:40px;
+    height:100%;
+}
+
+#footerStyle{
+    line-height:1.6;
+}
+
+.container-fluid{
+    min-height:100%;
+}
+
+ .lower-title{
+    margin-bottom:5%;
+}
+
+ .upper-title{
+     margin-top:5%;
+ }
+
+
+
+/*End positioning*/

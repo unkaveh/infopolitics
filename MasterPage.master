@@ -1,0 +1,161 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/StyleSheet.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="favicon.ico" type="image/ico"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/f58fc6f55f.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+		        <div class="navbar-header">
+			        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+			        </button>
+			        <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/logo.png" PostBackUrl="~/Default.aspx" CssClass="navbar-brand" />
+		        </div>
+		        <div class="collapse navbar-collapse" id="myNavbar">
+			        <ul class="nav navbar-nav navbar-right">
+				        <li>
+                            <asp:LinkButton ID="LinkButtonSearch"  runat="server" PostBackUrl="~/Search.aspx" Font-Bold="True" CssClass="navbar-link">Search</asp:LinkButton>
+				        </li>
+				        <li>
+                            <asp:LinkButton ID="LinkButtonAbout"  runat="server"  PostBackUrl="~/About.aspx" Font-Bold="True" >About</asp:LinkButton>
+				        </li>
+				        <li>
+					        <asp:LinkButton ID="LinkButtonContact" runat="server" PostBackUrl="~/Contact.aspx" Font-Bold="True" >Contact</asp:LinkButton>
+				        </li>
+				        <li>
+					        <asp:LinkButton ID="LinkButtonDonation" runat="server"  PostBackUrl="~/Donate.aspx" Font-Bold="True" >Donate</asp:LinkButton>
+				        </li>
+                        <asp:ContentPlaceHolder runat="server" ID="WalterBlack" Visible="true">
+                        <li class="dropdown">
+					        <a href="Login.aspx" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+					        <ul class="dropdown-menu" id="login-drop">
+						        <li>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <asp:PlaceHolder  runat="server" ID="LoginStatus" Visible="false">
+                                                    <p>
+                                                       <asp:Literal runat="server" ID="StatusText" />
+                                                    </p>
+                                                </asp:PlaceHolder>
+                                            </div>
+                                                <asp:PlaceHolder runat="server" ID="LoginForm" Visible="false">
+                                              <div class="form-group">  
+                                                    <label for="userName" class="nav-label">User Name:</label>
+                                                    <asp:TextBox runat="server" ID="userName" CssClass="form-control" />
+                                                  </div>
+									       <div class="form-group">
+											         <label class="nav-label" for="Password">Password</label>
+											         <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" />
+                                           </div>
+                                                    <a href="Register.aspx">New to InfoPolitics?</a>
+                                                    <div class="form-group">
+                                                      <asp:Button runat="server" OnClick="SignIn" Text="Log in" CssClass="btn btn-success btn-block" />
+                                                </div>
+                                                    </asp:PlaceHolder>
+                                                <asp:PlaceHolder runat="server" ID="LogoutButton" Visible="false">
+                                                    <div class="form-group">
+                                                    <asp:Button runat="server" OnClick="SignOut" Text="Log out" CssClass="btn btn-success btn-block" />
+                                                        </div> <%--End Form-Group--%>
+                                                </asp:PlaceHolder>
+									        
+									        
+                                        </div> <%--End Col-lg-12 --%>
+                                    </div> <%--End Row--%>
+                                </li>
+					        </ul> <%--End ul--%>
+				        </li> <%--End li for dropdown--%>
+                        </asp:ContentPlaceHolder>
+                        
+                        <asp:ContentPlaceHolder runat="server" ID="WalterWhite" Visible="false">
+                            <li>
+                            <a href="Profile.aspx">
+                            <span class="glyphicon glyphicon glyphicon-user" aria-hidden="true"></span>
+                            <asp:Literal runat="server" ID="StatusLoginText"></asp:Literal></a>
+                            
+                                </li>
+                            
+                            <li>
+                               <asp:LinkButton runat="server" OnClick="SignOut" Text="Log Out"></asp:LinkButton>
+                            </li>
+                        </asp:ContentPlaceHolder>
+                            
+			        </ul>
+		        </div>
+	        </div>
+        </nav>
+       <%-- End Navbar--%>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+        <div class="container">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server"></asp:ContentPlaceHolder>
+        </div> <%--End Main Body Container--%>
+
+        
+    <%--Need to add more to footer--%>
+
+         <%--Additional javascript--%>
+        <script src="Scripts/velocity.min.js"></script>
+        <script src="Scripts/velocity.ui.js"></script>
+        <script src="Scripts/scrollmagic/minified/ScrollMagic.min.js"></script>
+        <script src="Scripts/scrollmagic/minified/plugins/animation.velocity.min.js"></script>
+        <script src="Scripts/JavaScript.js"></script>
+        <script src="Scripts/NavScript.js"></script>
+    </form>
+    <footer class="footer">
+        <div class="container">
+		    <div class="row" id="footerStyle">
+                <div class="col-sm-3">
+                    <h4>About</h4>
+                    <a href="~/about.aspx">InfoPolitics</a> is a nonprofit organization built with the idea that technology should be available to help inform.
+                </div>
+                <div class="col-sm-3">
+                    <h4>Information</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="Privacy.aspx">Privacy Policy</a></li>
+                        <li><a href="Terms.aspx">Terms & Conditions</a></li>
+                        <li><a href="AboutUs.aspx">Our Team</a></li>
+                        <li><a href="Contact.aspx">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h4>Office</h4>
+                    P: (470) 578-6000
+                    <br />  1000 Chastain Rd, Kennesaw
+					<br /> Kennesaw, GA 30144
+                </div>
+                <div class="col-sm-3">
+                    <br />
+                    <br />
+                    
+                    <a href="https://www.facebook.com/kennesaw.state"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+</a>
+                    <a href="https://www.instagram.com/infopolitics/"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+</a>
+                    <a href="https://www.twitter.com/stay___informed"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+		    </div>
+        </div>
+    </footer>
+</body>
+</html>
